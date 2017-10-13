@@ -1,19 +1,14 @@
 <template>
   <div class="container">
-    Ticker
+    Main
   </div>
 </template>
 
 <script>
   export default {
-    name: 'GvTicker',
+    name: 'GvMain',
     data () {
-      const options = {
-        hour: '2-digit', minute: '2-digit'//, second: '2-digit'
-      }
       return {
-        options: options,
-        date: new Date()
       }
     },
     created: function () {
@@ -31,7 +26,7 @@
   }
 
   .container {
-    background-color: #222;
+    background-color: #444;
     height:33px;
     display: flex;
     align-items: center;

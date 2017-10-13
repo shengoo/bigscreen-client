@@ -41,12 +41,11 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   * {
-    font-family: 'KnowledgeMedium';
+    font-family: KnowledgeMedium, sans-serif;
   }
 
   .container {
     background-color: rgb(37, 37, 41);
-    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
