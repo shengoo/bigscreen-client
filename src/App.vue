@@ -29,6 +29,9 @@ export default {
 </script>
 
 <style>
+  * {
+    font-family: KnowledgeMedium, sans-serif;
+  }
   body, html {
     margin: 0;
     background-color: #000;

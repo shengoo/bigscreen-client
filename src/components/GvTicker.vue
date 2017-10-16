@@ -4,7 +4,7 @@
     <div class="content">
       <transition name="cube-top">
         <div class="row" v-if="showing === 'Currencies'" key="Currencies">
-          <div>Currencies：</div>
+          <div class="label">Currencies：</div>
           <div class="item">
             <div>GBP/CNY</div>
             <div>8.74</div>
@@ -19,7 +19,7 @@
       <!--</transition>-->
       <!--<transition :duration="2000" name="fade">-->
         <div class="row" v-if="showing === 'Equities'" key="Equities">
-          <div>Equities：</div>
+          <div class="label">Equities：</div>
           <div class="item">
             <div>GBP/CNY</div>
             <div>8.74</div>
@@ -34,7 +34,7 @@
       <!--</transition>-->
       <!--<transition :duration="2000" name="fade">-->
         <div class="row" v-if="showing === 'Commodities'" key="Commodities">
-          <div>Commodities：</div>
+          <div class="label">Commodities：</div>
           <div class="item">
             <div>LCOc1</div>
             <div>57.19</div>
@@ -101,6 +101,9 @@
     flex:1;
     display: flex;
     flex-direction: row;
+  }
+  .row .label{
+    /*position: fixed;*/
   }
   .item{
     display: flex;
