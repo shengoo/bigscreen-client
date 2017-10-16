@@ -88,6 +88,7 @@
     height:33px;
     display: flex;
     align-items: center;
+    padding:0 10px;
   }
   .content{
     flex:1;
