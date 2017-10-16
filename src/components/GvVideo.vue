@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <video
-      src="../assets/sample.mov"
+      src="../assets/reuters_mstr_rev_0114_5.mov"
       autoplay loop autobuffer></video>
   </div>
 </template>

@@ -57,4 +57,7 @@ export default {
   .main-content{
     flex:1;
   }
+  .side{
+    width: 286px;
+  }
 </style>

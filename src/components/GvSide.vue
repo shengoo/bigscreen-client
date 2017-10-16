@@ -1,14 +1,19 @@
 <template>
   <div class="container">
     <gv-video></gv-video>
+    <gv-code></gv-code>
   </div>
 </template>
 
 <script>
   import GvVideo from './GvVideo.vue'
+  import GvCode from './GvCode.vue'
   export default {
     name: 'GvSide',
-    components: {GvVideo},
+    components: {
+      GvVideo,
+      GvCode
+    },
     data () {
       return {
       }
@@ -32,6 +37,7 @@
     display: flex;
     flex-direction:column;
     align-items: center;
+    justify-content: space-between;
   }
 
 </style>

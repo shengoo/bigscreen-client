@@ -27,6 +27,8 @@
     /*height:33px;*/
     display: flex;
     align-items: center;
+    background-image: url("../assets/background_image (1).jpg");
+    background-size: 100% 100%;
   }
 
 </style>
