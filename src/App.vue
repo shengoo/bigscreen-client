@@ -15,6 +15,7 @@ import TrHeader from './components/GvHeader'
 import GvTicker from './components/GvTicker'
 import GvMain from './components/GvMain.vue'
 import GvSide from './components/GvSide.vue'
+import GvVideo from './components/GvVideo.vue'
 
 export default {
   name: 'app',
@@ -23,7 +24,8 @@ export default {
     TrHeader,
     GvMain,
     HelloWorld,
-    GvTicker
+    GvTicker,
+    GvVideo
   }
 }
 </script>
@@ -38,15 +40,15 @@ export default {
     height: 100%;
     color: #fff;
   }
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  height: 100%;
-  display: flex;
-  flex-direction:column;
-}
+  #app {
+    /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+  }
   .main{
     flex: 1;
     display: flex;

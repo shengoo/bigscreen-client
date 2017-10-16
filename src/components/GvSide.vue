@@ -1,12 +1,14 @@
 <template>
   <div class="container">
-    Side
+    <gv-video></gv-video>
   </div>
 </template>
 
 <script>
+  import GvVideo from './GvVideo.vue'
   export default {
     name: 'GvSide',
+    components: {GvVideo},
     data () {
       return {
       }
@@ -27,8 +29,8 @@
 
   .container {
     background-color: #333;
-    /*height:33px;*/
     display: flex;
+    flex-direction:column;
     align-items: center;
   }
 
