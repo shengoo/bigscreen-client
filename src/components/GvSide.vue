@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    Main
+    Side
   </div>
 </template>
 
 <script>
   export default {
-    name: 'GvMain',
+    name: 'GvSide',
     data () {
       return {
       }
@@ -26,7 +26,7 @@
   }
 
   .container {
-    background-color: #444;
+    background-color: #333;
     /*height:33px;*/
     display: flex;
     align-items: center;

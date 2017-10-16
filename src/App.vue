@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <tr-header></tr-header>
-    <gv-main class="main"></gv-main>
+    <div class="main">
+      <gv-main class="main-content"></gv-main>
+      <gv-side class="side"></gv-side>
+    </div>
     <gv-ticker></gv-ticker>
   </div>
 </template>
@@ -11,10 +14,12 @@ import HelloWorld from './components/HelloWorld'
 import TrHeader from './components/GvHeader'
 import GvTicker from './components/GvTicker'
 import GvMain from './components/GvMain.vue'
+import GvSide from './components/GvSide.vue'
 
 export default {
   name: 'app',
   components: {
+    GvSide,
     TrHeader,
     GvMain,
     HelloWorld,
@@ -41,5 +46,10 @@ export default {
 }
   .main{
     flex: 1;
+    display: flex;
+    align-items:stretch;
+  }
+  .main-content{
+    flex:1;
   }
 </style>
