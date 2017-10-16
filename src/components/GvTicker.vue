@@ -1,15 +1,53 @@
 <template>
   <div class="container">
-    数据来源：Thomson Reuters
-    <transition name="fade">
-      <div v-show="showing === 'Currencies'" key="Currencies">Currencies： GBP/CNY 8.74 1.09% USD/CNY 6.59 0.00% EUR/CNY 7.79 -0.03% USD/JPY 112.11 -0.14%</div>
-    </transition>
-    <transition name="fade">
-      <div v-show="showing === 'Equities'" key="Equities">Equities： TRI 46.43 0.24% CITI 72.37 -3.43% IBM 147.03 -0.40% LeTV 30.68 0.00%</div>
-    </transition>
-    <transition name="fade">
-      <div v-show="showing === 'Commodities'" key="Commodities">Commodities： LCOc1 57.19 1.07 CLc1 51.35 0.83 Gold 1293.75 0.35 Silver 17.23 0.06</div>
-    </transition>
+    <div>数据来源：Thomson Reuters</div>
+    <div class="content">
+      <transition name="cube-top">
+        <div class="row" v-if="showing === 'Currencies'" key="Currencies">
+          <div>Currencies：</div>
+          <div class="item">
+            <div>GBP/CNY</div>
+            <div>8.74</div>
+            <div>1.09%</div>
+          </div>
+          <div class="item">
+            <div>GBP/CNY</div>
+            <div>8.74</div>
+            <div>1.09%</div>
+          </div>
+        </div>
+      <!--</transition>-->
+      <!--<transition :duration="2000" name="fade">-->
+        <div class="row" v-if="showing === 'Equities'" key="Equities">
+          <div>Equities：</div>
+          <div class="item">
+            <div>GBP/CNY</div>
+            <div>8.74</div>
+            <div>1.09%</div>
+          </div>
+          <div class="item">
+            <div>GBP/CNY</div>
+            <div>8.74</div>
+            <div>1.09%</div>
+          </div>
+        </div>
+      <!--</transition>-->
+      <!--<transition :duration="2000" name="fade">-->
+        <div class="row" v-if="showing === 'Commodities'" key="Commodities">
+          <div>Commodities：</div>
+          <div class="item">
+            <div>LCOc1</div>
+            <div>57.19</div>
+            <div>1.07</div>
+          </div>
+          <div class="item">
+            <div>GBP/CNY</div>
+            <div>8.74</div>
+            <div>1.09%</div>
+          </div>
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -22,7 +60,7 @@
     name: 'GvTicker',
     data () {
       return {
-        showing: 'Currencies'
+        showing: types[0]
       }
     },
     created: function () {
@@ -50,6 +88,50 @@
     height:33px;
     display: flex;
     align-items: center;
+  }
+  .content{
+    flex:1;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  .row{
+    position: absolute;
+    flex:1;
+    display: flex;
+    flex-direction: row;
+  }
+  .item{
+    display: flex;
+    flex-direction: row;
+    padding:0 10px;
+  }
+  .item>div{
+    padding:0 5px;
+  }
+
+  .cube-top-enter-active {
+    animation: cube-top-in .5s;
+  }
+  .cube-top-leave-active {
+    animation: cube-top-out .5s;
+  }
+
+  @keyframes cube-top-in {
+    from{
+      transform: translateY(100%) rotateX(90deg);
+      transform-origin: top;
+    }
+    to{
+      transform: rotateX(0)
+    }
+  }
+
+  @keyframes cube-top-out {
+    to{
+      transform: translateY(-100%) rotateX(-90deg);
+      transform-origin: bottom;
+    }
   }
 
 </style>
