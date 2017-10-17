@@ -39,6 +39,7 @@ export default {
     background-color: #000;
     height: 100%;
     color: #fff;
+    overflow: hidden;
   }
   #app {
     /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
